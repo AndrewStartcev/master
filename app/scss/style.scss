@@ -1,0 +1,18 @@
+@import 'utils/variables';
+
+@import 'mixins/media';
+
+@import 'common/global';
+
+@import 'common/buttons';
+
+@import 'common/text';
+
+@import 'common/header';
+
+@import 'common/popup';
+
+@import 'common/footer';
+
+// Страницы и блоки
+@import 'pages/common/main';

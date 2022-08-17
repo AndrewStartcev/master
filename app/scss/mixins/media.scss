@@ -1,0 +1,37 @@
+@import '../utils/variables';
+
+@mixin media-custom($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin media-tablet-horizontal {
+	@media (max-width: ($mediaWidthLaptop - 0.2px)) {
+		@content;
+	}
+}
+
+@mixin media-tablet {
+	@media (max-width: ($mediaWidthTabletHorizontal - 0.2px)) {
+		@content;
+	}
+}
+
+@mixin media-mobile-horizontal {
+	@media (max-width: ($mediaWidthTablet - 0.2px)) {
+		@content;
+	}
+}
+
+@mixin media-mobile {
+	@media (max-width: ($mediaWidthMobileHorizontal - 0.2px)) {
+		@content;
+	}
+}
+
+@mixin media-mobile-min {
+	@media (max-width: ($mediaWidthMobile - 0.2px)) {
+		@content;
+	}
+}
