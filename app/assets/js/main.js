@@ -15,14 +15,14 @@ $(document).ready(() => {
     $('html').removeClass('lock');
   });
 
-  $(document).on("mouseup", function (e) {
-    var div = $(".menu__container");
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-      menu.removeClass('open');
-      $('.menu-item-has-children').removeClass('active')
-      $('html').removeClass('lock');
-    }
-  });
+  // $(document).on("mouseup", function (e) {
+  //   var div = $(".menu__container");
+  //   if (!div.is(e.target) && div.has(e.target).length === 0) {
+  //     menu.removeClass('open');
+  //     $('.menu-item-has-children').removeClass('active')
+  //     $('html').removeClass('lock');
+  //   }
+  // });
 
 
   /* Всплывающие окна по классу и ID */
