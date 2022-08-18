@@ -2,8 +2,12 @@
   .popup__content
     .popup__body
       button.popup__close
-      h2.popup__title
-      p.popup__text
+      h2.popup__title Начните свой проект уже сегодня
       .popup__form
         form(action="")
-        .popup__form--info
+          input(type="text", name="user_name" placeholder="Ваше имя*")
+          input(type="tel", name="user_phone" placeholder="Номер телефона")
+          input(type="email", name="user_email" placeholder="Электронная почта")
+          textarea(name="user_text", cols="30", rows="10" placeholder="Краткое описание проекта (задачи, цели)")
+          input.btn(type="button", value="Отправить")
+        .popup__form--info Отправляя форму, вы соглашаетесь с <a href="#">политикой обработки</a>  и использования <a href="#">персональных данных</a>

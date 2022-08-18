@@ -34,6 +34,23 @@ button {
 	border: none;
 	box-shadow: none;
 }
+input,
+textarea {
+	padding: 10px 0;
+	border: none;
+	border-bottom: 2px solid $black;
+	font-size: 16px;
+	line-height: 120.3%;
+	color: $black;
+	&:focus {
+		outline: none;
+		border-bottom: 2px solid $main;
+	}
+}
+textarea {
+	resize: none;
+}
+
 section {
 	padding: 45px 0;
 	@include media-mobile-horizontal {
@@ -45,7 +62,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .lock {
 	overflow: hidden;

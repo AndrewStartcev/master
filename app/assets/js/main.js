@@ -1,5 +1,30 @@
 $(document).ready(() => {
 
+  let menuBurger = $('.header__burger');
+  let menuClose = $('.menu__close');
+  let menu = $('.menu');
+
+  menuBurger.click(function () {
+    menu.addClass('open');
+    $('html').addClass('lock');
+  });
+
+  menuClose.click(function () {
+    menu.removeClass('open');
+    $('.menu-item-has-children').removeClass('active');
+    $('html').removeClass('lock');
+  });
+
+  $(document).on("mouseup", function (e) {
+    var div = $(".menu__container");
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      menu.removeClass('open');
+      $('.menu-item-has-children').removeClass('active')
+      $('html').removeClass('lock');
+    }
+  });
+
+
   /* Всплывающие окна по классу и ID */
   $('[data-popup]').on('click', function (e) {
     $('.popup').removeClass('show');
@@ -17,28 +42,13 @@ $(document).ready(() => {
     $('.popup').removeClass('show');
     $('html').removeClass('lock');
   });
-  $(document).on("mouseup", function (e) {
-    var div = $(".popup__body");
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-      $('.popup').removeClass('show');
-      $('html').removeClass('lock');
-    }
-  });
 
-  scrollHeader()
+  $('.menu-item-has-children > a').click(function () {
+    let currentEl = $(this).parent('.menu-item-has-children')
+    $('.menu-item-has-children').not(currentEl).removeClass('active');
+    currentEl.toggleClass('active');
+  })
 
-  $(window).scroll(function () {
-    scrollHeader()
-  });
-
-  function scrollHeader() {
-    var height = $(window).scrollTop();
-    if (height > 50) {
-      $('header').addClass('header-bg');
-    } else {
-      $('header').removeClass('header-bg');
-    }
-  }
 });
 
 // ======== Маска для телефона ===============

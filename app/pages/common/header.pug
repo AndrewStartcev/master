@@ -1,1 +1,47 @@
 header.header#header
+  .container
+    .header__wrapper
+      a.header__logo(href="#")
+        img(src="assets/img/upload/logo.png", alt="Гуд бит")
+      nav.header__menu.menu
+        .menu__container
+          button.menu__close
+          a.menu__logo(href="#")
+            img(src="assets/img/upload/logo.png", alt="Гуд бит")
+          ul.menu__list
+            li.menu-item.current
+              a(href="#") Главная
+            li.menu-item.menu-item-has-children
+              a(href="#") Услуги
+              ul.sub-menu
+                li.menu-item
+                  a(href="#") Веб-разработка
+                li.menu-item
+                  a(href="#") Сопровождение сайта
+                li.menu-item
+                  a(href="#") Мобильная разработка
+            li.menu-item
+              a(href="#") Проекты
+            li.menu-item.menu-item-has-children
+              a(href="#") Компания
+              ul.sub-menu
+                li.menu-item
+                  a(href="#") О компании
+                li.menu-item
+                  a(href="#") Вакансии
+                li.menu-item
+                  a(href="#") Отзывы
+            li.menu-item
+              a(href="#") Контакты
+          .menu__footer
+            a.menu__phone(href="#") +7 (952) 618-91-55
+            a.menu__email(href="#") info@goodbit.ru
+            a.menu__policy(href="#") Политики конфиденциальности
+            p.menu__copyright © ООО “ГУД БИТ” 2022
+      .header__contacts
+        a.header__phone(href="#") +7 (952) 618-91-55
+        button.header__btn Начать проект
+      button.header__burger
+        span
+        span
+        span
