@@ -1,0 +1,130 @@
+.last-notes {
+	&__body {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 30px;
+	}
+	&__post {
+		flex: 1 1 calc(33.33% - 30px);
+	}
+	&__detalis {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-top: 10px;
+	}
+	&__cover {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		padding-bottom: 50.999%;
+		border-radius: 5px;
+		img {
+			border-radius: 5px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 14px;
+		line-height: 120.3%;
+		color: $black;
+		&::before {
+			content: '';
+			display: inline-flex;
+			width: 18px;
+			height: 18px;
+			margin-right: 5px;
+		}
+		&.view {
+			margin-right: 30px;
+			&::before {
+				background: url('../img/icons/view.svg') center center / contain no-repeat;
+			}
+		}
+		&.star {
+			&::before {
+				background: url('../img/icons/star.svg') center center / contain no-repeat;
+			}
+		}
+		&.date {
+			margin-left: auto;
+			&::before {
+				background: url('../img/icons/date.svg') center center / contain no-repeat;
+			}
+		}
+	}
+	&__title {
+		margin-top: 20px;
+		margin-bottom: 0;
+		min-height: 55px;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	&__excert {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+}
+
+@include media-tablet-horizontal {
+	.last-notes {
+		&__body {
+			gap: 20px;
+		}
+		&__post {
+			flex: 1 1 calc(33.33% - 20px);
+		}
+		&__info {
+			&.view {
+				margin-right: 20px;
+			}
+		}
+		&__title {
+			margin-top: 15px;
+		}
+		&__excert {
+			margin-top: 10px;
+		}
+	}
+}
+@include media-tablet {
+	.last-notes {
+		&__post {
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}
+@include media-mobile {
+	.last-notes {
+		&__body {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__post {
+			flex: 1 1 100%;
+			&:last-child {
+				display: block;
+			}
+		}
+		&__title {
+			min-height: 0;
+			max-width: 70%;
+		}
+	}
+}

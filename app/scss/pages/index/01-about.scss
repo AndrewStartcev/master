@@ -1,0 +1,50 @@
+.about {
+	&__title {
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 187.8%;
+		margin: 0;
+		padding: 0;
+	}
+	&__text {
+		max-width: 915px;
+		margin-top: 38px;
+		font-size: 18px;
+		line-height: 184.3%;
+		p {
+			margin-top: 0;
+		}
+	}
+	.services-list {
+		margin-top: 90px;
+	}
+}
+@include media-tablet-horizontal {
+	.about {
+		&__text {
+			max-width: 860px;
+			margin-top: 30px;
+		}
+	}
+}
+@include media-mobile {
+	.about {
+		&__title {
+			font-size: 20px;
+		}
+		&__text {
+			font-size: 16px;
+			margin-top: 20px;
+		}
+		.services-list {
+			margin-top: 60px;
+		}
+	}
+}
+@include media-mobile-min {
+	.about {
+		&__title {
+			font-size: 18px;
+		}
+	}
+}

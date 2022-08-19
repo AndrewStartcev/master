@@ -1,0 +1,121 @@
+.form {
+	padding-bottom: 90px;
+	&__title {
+		text-align: center;
+	}
+	&__subtitle {
+		margin-top: 30px;
+		text-align: center;
+		font-size: 18px;
+		line-height: 120.3%;
+		a {
+			color: $main;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__text {
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		font-size: 20px;
+		line-height: 120.3%;
+		color: $black;
+	}
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		gap: 30px;
+		max-width: 790px;
+		margin: 0 auto;
+		input,
+		select {
+			flex: 1 1 calc(50% - 30px);
+		}
+		.textarea {
+			flex: 1 1 100%;
+			textarea {
+				width: 100%;
+			}
+		}
+		input[type='button'] {
+			margin-top: 20px;
+			max-width: 278px;
+			margin-left: auto;
+		}
+	}
+	&__info {
+		margin-top: 20px;
+		max-width: 404px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 120.3%;
+		a {
+			color: $main;
+			&:hover {
+				color: darken($main, 20);
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.form {
+		&__subtitle {
+			margin-top: 20px;
+		}
+		&__text {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		form {
+			gap: 20px;
+			input,
+			select {
+				flex: 1 1 calc(50% - 20px);
+			}
+		}
+	}
+}
+@include media-tablet {
+	.form {
+		&__info {
+			max-width: 80%;
+			margin-top: 0px;
+			order: 1;
+			flex: 1 1 100%;
+		}
+		form {
+			input[type='button'] {
+				margin-top: 20px;
+				max-width: 100%;
+			}
+		}
+	}
+}
+@include media-mobile {
+	.form {
+		&__subtitle {
+			font-size: 14px;
+			margin-top: 10px;
+		}
+		&__text {
+			margin-top: 15px;
+			font-size: 16px;
+		}
+		&__info {
+			max-width: 100%;
+			font-size: 12px;
+		}
+		form {
+			input[type='button'] {
+				margin-top: 20px;
+				max-width: 100%;
+			}
+		}
+	}
+}

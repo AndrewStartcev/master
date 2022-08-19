@@ -1,0 +1,18 @@
+section.form
+  .container
+    h2.form__title Хотите с нами работать? Заполните форму
+    p.form__subtitle или свяжитесь по эл.почте <a href="#">info@goodbit.ru</a>
+    p.form__text Мы ответим в течении 2-х часов в рабочее время
+    form(action="")
+      input(type="text", name="user_name" placeholder="Ваше имя*")
+      input(type="tel", name="user_phone" placeholder="Номер телефона")
+      input(type="email", name="user_email" placeholder="Электронная почта")
+      select(name="user_type")
+        option(value="Тип работы" selected disabled) Тип работы
+        option(value="Разработка сайта") Разработка сайта
+        option(value="Поддержка сайт") Поддержка сайт
+        option(value="Мобильная разработка") Мобильная разработка
+      .textarea
+        textarea(name="user_text", cols="10", rows="6" placeholder="Краткое описание проекта (задачи, цели)")
+      .form__info Отправляя форму, вы соглашаетесь с <a href="#">политикой обработки</a>  и использования <a href="#">персональных данных</a>
+      input.btn(type="button", value="Отправить")

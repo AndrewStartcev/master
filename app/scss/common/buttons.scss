@@ -8,6 +8,8 @@ button {
 	text-align: center;
 	color: $white;
 	background: $main;
+	box-shadow: none;
+	border: none;
 	border-radius: 5px;
 	padding: 20px 10px;
 	transition: background 0.3s ease;

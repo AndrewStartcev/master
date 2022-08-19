@@ -14,5 +14,14 @@
 
 @import 'common/footer';
 
-// Страницы и блоки
+// Общие блоки
 @import 'pages/common/main';
+@import 'pages/common/services-list';
+@import 'pages/common/projects-block';
+@import 'pages/common/header-block';
+@import 'pages/common/core-value';
+@import 'pages/common/form';
+
+// Страницы и блоки
+@import 'pages/index/01-about';
+@import 'pages/index/03-last-notes';
