@@ -1,0 +1,13 @@
+extends common/layout
+
+block content
+  main.content
+    section.not-page
+      .container
+        .not-page__body
+          .not-page__image
+            img(src="assets/img/upload/404.svg", alt="")
+          .not-page__content
+            h1 Данной страницы <br> не существует
+            p К сожалению, такой страницы не существует на нашем сайте, но вы можете связаться с нами и мы ответим на ваши вопросы.
+            button.btn(data-popup="#mainForm") Связаться с нами
