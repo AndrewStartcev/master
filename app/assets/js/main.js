@@ -47,7 +47,20 @@ $(document).ready(() => {
     let currentEl = $(this).parent('.menu-item-has-children')
     $('.menu-item-has-children').not(currentEl).removeClass('active');
     currentEl.toggleClass('active');
-  })
+  });
+
+
+  // ===== Табы для блока "Процесс работы"
+  let workTabLink = $('.work-process__btn');
+  let workTabBlock = $('.work-process__block');
+
+  workTabLink.click(function () {
+    let id = "#" + $(this).attr("data-tab")
+    workTabLink.removeClass('active')
+    workTabBlock.removeClass('active')
+    $(this).addClass('active')
+    $(id).addClass('active')
+  });
 
 });
 

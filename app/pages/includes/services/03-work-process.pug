@@ -1,0 +1,88 @@
+section.work-process
+  .container
+    .header-block
+      h2 Процесс работы
+    .work-process__body
+      .work-process__list
+        button.work-process__btn.active(data-tab="block_starting")
+          img(src="assets/img/upload/icons/algorithm_map.svg", alt="")
+          span Подготовка
+        button.work-process__btn(data-tab="block_analytics")
+          img(src="assets/img/upload/icons/gears_team.svg", alt="")
+          span Аналитика
+        button.work-process__btn(data-tab="block_disign")
+          img(src="assets/img/upload/icons/draw_pen.svg", alt="")
+          span Дизайн
+        button.work-process__btn(data-tab="block_coding")
+          img(src="assets/img/upload/icons/coding_page.svg", alt="")
+          span Разработка
+        button.work-process__btn(data-tab="block_testing")
+          img(src="assets/img/upload/icons/click_decision.svg", alt="")
+          span Тестирование
+        button.work-process__btn(data-tab="block_setting")
+          img(src="assets/img/upload/icons/setting.svg", alt="")
+          span Поддержка
+      .work-process__blocks
+        .work-process__block#block_starting.active
+          .work-process__icon
+            img(src="assets/img/upload/icons/algorithm_map.svg", alt="")
+          .work-process__content
+            h3 Подготовка
+            ul
+              li Проведения брифинга, обсуждение проекта;
+              li Уточнение деталей и разработка сметы проекта;
+              li Подготовка функциональной карты проекта и договора.
+            p Результат - точная оценка и фиксированная стоимость проекта.
+            button Заказать расчет стоимости проекта
+        .work-process__block#block_analytics
+          .work-process__icon
+            img(src="assets/img/upload/icons/gears_team.svg", alt="")
+          .work-process__content
+            h3 Аналитика
+            ul
+              li Определение ключевой и дополнительных целей проекта;
+              li Предпроектное обследование, CJM (формирование фокус-групп, портретов клиента, сценариев пользователя)
+              li Разработка интерактивного прототипа, его тестирование, подготовка Технического задания.
+            p Результат – идея обретает форму.
+        .work-process__block#block_disign
+          .work-process__icon
+            img(src="assets/img/upload/icons/draw_pen.svg", alt="")
+          .work-process__content
+            h3 Дизайн
+            ul
+              li Разработка дизайн-концепций;
+              li Разработка макетов страниц, элементов дизайна и UI kit;
+              li Тестирование.
+            p Результат - дизайн, соответствующий трендам, основная задача которого - достижение бизнес-целей проекта.
+        .work-process__block#block_coding
+          .work-process__icon
+            img(src="assets/img/upload/icons/coding_page.svg", alt="")
+          .work-process__content
+            h3 Разработка
+            ul
+              li Проектирование архитектуры системы;
+              li Верстка и имплементация шаблонов страниц и компонентов;
+              li Разработка функциональной части;
+              li Модульное и функциональное тестирование;
+              li Конфигурирование серверного окружения.
+        .work-process__block#block_testing
+          .work-process__icon
+            img(src="assets/img/upload/icons/click_decision.svg", alt="")
+          .work-process__content
+            h3 Тестирование
+            ul
+              li Полный аудит системы перед запуском;
+              li Нагрузочное тестирование для плановых и пиковых показателей
+              li Аудит административной части сайта и мониторинг в работы в "боевых" условиях.
+            p Результат – веб-система готова к работе с посетителями, покупателями и клиентами.
+        .work-process__block#block_setting
+          .work-process__icon
+            img(src="assets/img/upload/icons/setting.svg", alt="")
+          .work-process__content
+            h3 Поддержка
+            ul
+              li Настройка системы контроля версий Git;
+              li Выполнение регламентных ежемесячных задач (по согласованию);
+              li Разработка новых функциональных модулей, поддержка и развитие ресурса. Администрирование серверов.
+              li Ежемесячная отчетность.
+            p Результат – постоянное развитие и модернизация ресурса выделенной командой.
