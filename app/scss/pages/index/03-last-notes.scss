@@ -4,6 +4,17 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap: 30px;
+		&.flex {
+			flex-wrap: wrap;
+			.last-notes__post {
+				flex-grow: 0;
+				flex-shrink: 0;
+				@include media-tablet {
+					flex-grow: 1;
+					flex-shrink: 1;
+				}
+			}
+		}
 	}
 	&__post {
 		flex: 1 1 calc(33.33% - 30px);

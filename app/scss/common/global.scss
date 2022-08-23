@@ -59,6 +59,15 @@ section {
 	}
 }
 
+.section-main {
+	padding: 45px 0;
+	padding-top: 140px;
+	@include media-mobile-horizontal {
+		padding: 30px 0;
+		padding-top: 110px;
+	}
+}
+
 .page {
 	display: flex;
 	flex-direction: column;
@@ -90,5 +99,32 @@ section {
 	}
 	@include media-tablet {
 		padding: 0px 10px;
+	}
+}
+
+.pagination {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 50px;
+	gap: 5px;
+	&-item {
+		min-width: 28px;
+		min-height: 28px;
+		padding: 2px 7px;
+		border-radius: 5px;
+		border: 2px solid transparent;
+		transition: all 0.5s ease;
+		&:hover {
+			border-color: $main;
+		}
+		&.active {
+			border-color: $main;
+			background: $main;
+			color: $white;
+		}
 	}
 }
