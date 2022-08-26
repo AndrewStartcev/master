@@ -11,3 +11,21 @@
           textarea(name="user_text", cols="10", rows="6" placeholder="Краткое описание проекта (задачи, цели)")
           input.btn(type="button", value="Отправить")
         .popup__form--info Отправляя форму, вы соглашаетесь с <a href="#">политикой обработки</a>  и использования <a href="#">персональных данных</a>
+
+.popup#SuccessForm
+  .popup__content
+    .popup__body
+      button.popup__close
+      h2.popup__title Спасибо за обращение!
+      p.popup__text В ближайшее время наш менеджер свяжется с Вами
+      button.popup-close Закрыть окно
+
+.warning.warning--active
+  .container.warning__container
+    .warning__content
+      .warning__icon
+        img(src="assets/img/icons/cookie.svg", alt="")
+      .warning__text
+        h4 На этом веб-сайте используются cookie.
+        a(href="https://ru.wikipedia.org/wiki/Cookie" target="_blank") Читать полностью
+    button.warning__apply Хорошо
