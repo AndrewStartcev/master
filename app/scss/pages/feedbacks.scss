@@ -17,6 +17,7 @@
 		border-radius: 5px;
 	}
 	&__link {
+		flex: 0 0 auto;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -44,6 +45,7 @@
 		background: $gray-l;
 		transition: all 0.5s ease;
 		img {
+			margin: 0;
 			width: 28px;
 			height: 28px;
 		}
@@ -89,7 +91,6 @@
 		}
 	}
 }
-
 @include media-mobile {
 	.feedbacks {
 		&__item {
